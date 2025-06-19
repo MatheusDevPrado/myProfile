@@ -296,7 +296,7 @@ button {
 .project-text.hidden { display: none; }
 
 /* RESPONSIVIDADE */
-@media (max-width: 1020px) {
+@media (max-width: 900px) {
     .profile-container {
         flex-direction: column;
         min-height: auto;
