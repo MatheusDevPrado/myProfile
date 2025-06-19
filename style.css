@@ -216,8 +216,15 @@ body {
 /* === RESPONSIVIDADE === */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: flex;
+  display: flex !important;    /* força exibição mesmo em desktop */
+  position: relative;
+  z-index: 2000;               /* fica sempre acima de tudo */
   }
+  .hero__header {
+  position: relative;
+  z-index: 2000;
+  }
+  
   .hero__nav ul {
     position: fixed;
     top: 0;
@@ -233,5 +240,9 @@ body {
   }
   .hero__nav ul.show {
     left: 0;
+  }
+  .projects,
+  .contact {
+    background-attachment: scroll;  /* agora o background acompanha o scroll */
   }
 }
