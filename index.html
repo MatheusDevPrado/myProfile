@@ -9,23 +9,17 @@
 
 </head>
 <body>
-    <div>
-       <header>
-          <nav>
-            <div class="menu-toggle" onclick="toggleMenu()">
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <ul>
-              <a href="#elemento01"><li>Home</li></a>
-              <a href="#elemento02"><li>Projetos</li></a>
-              <a href="#elemento03"><li>Tecnologias</li></a>
-              <a href="#elemento04"><li>Contato</li></a>
-            </ul>
-          </nav>
-        </header>
-        </div>
+    <div id="elemento01" class="hero-container">
+            <header>
+                <nav>
+                    <ul>
+                        <a href="#elemento01"><li>Home</li></a>
+                        <a href="#elemento02"><li>Projetos</li></a>
+                        <a href="#elemento03"><li>Tecnologias</li></a>
+                        <a href="#elemento04"><li>Contato</li></a>
+                    </ul>
+                </nav>
+            </header>
         <h1>Procurando um desenvolvedor FullStack?</h1>
         <svg class="arrows">
             <path class="a1" d="M0 0 L30 32 L60 0"></path>
@@ -59,20 +53,22 @@
             </div>
             <div>
                 <p class="profile-sinopse">
-                   Sou um desenvolvedor full-stack apaixonado por tecnologia, 
+                    Sou um desenvolvedor full-stack apaixonado por tecnologia, 
                     proativo, dedicado e comprometido com a excelência. Estou 
-                    em busca de novos desafios que me permitam aplicar e expandir 
-                    meus conhecimentos, sempre com foco na evolução contínua e no 
-                    uso de ferramentas modernas de desenvolvimento.
-                    Tenho experiência prática no desenvolvimento de projetos 
-                    utilizando tecnologias amplamente adotadas no mercado, como 
-                    HTML, CSS, JavaScript e React. Além disso, possuo conhecimentos 
-                    sólidos em linguagens como Java, C++, Python e PHP, bem como em 
-                    bancos de dados relacionais e não relacionais, incluindo MySQL, 
-                    SQL Server, MongoDB e MariaDB. Sou movido por aprendizado constante 
-                    e pela vontade de fazer a diferença. Quero a oportunidade de contribuir 
-                    com seu negócio, somando minhas habilidades e visão de desenvolvimento
-                    para alcançarmos juntos resultados inovadores, eficientes e de alto impacto.</p>
+                    em busca de novos desafios que me permitam aplicar e ampliar 
+                    meus conhecimentos, sempre com foco na evolução contínua e 
+                    no uso de ferramentas modernas de desenvolvimento.
+                    Tenho experiência prática no desenvolvimento de projetos
+                     utilizando tecnologias amplamente utilizadas no mercado, 
+                     como HTML, CSS, JavaScript e React. Além disso, possuo 
+                     conhecimentos sólidos em linguagens como Java, C++, Python
+                      e PHP, bem como em bancos de dados relacionais e não 
+                      relacionais, incluindo MySQL, SQL Server, MongoDB e MariaDB.
+                    Sou movido pelo aprendizado constante e pela vontade de 
+                    fazer a diferença. Quero a oportunidade de contribuir com 
+                    seu negócio, somando minhas habilidades e visão de desenvolvimento 
+                    para alcançarmos juntos resultados inovadores, eficientes e de
+                     alto impacto..</p>
             </div>
         </div>
     </div>
@@ -153,17 +149,8 @@
                 </label>
             
                     <button type="submit">Enviar</button>
-            </form> 
+            </form>
 </div>
-</div> 
-<footer class="site-footer">
-  <p>© 2022 - Todos os direitos autorais reservados</p>
-</footer>
-<script>
-  function toggleMenu() {
-    const navUl = document.querySelector("nav ul");
-    navUl.classList.toggle("show");
-  }
-</script>
+</div>
 </body>
 </html>
