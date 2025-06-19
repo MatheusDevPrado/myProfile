@@ -78,6 +78,7 @@
                 <div class="position-container right">
                     <div class="project-card">
                         <img class="project-image" src="./image-danie's.png">
+                            <button class="toggle-desc">Ver descrição</button>
                         <p class="project-text">
                             Site desenvolvido como parte da conclusão de curso,
                              com o objetivo de divulgar os serviços oferecidos 
@@ -91,6 +92,7 @@
                 <div class="position-container left">
                     <div class="project-card">
                         <img class="project-image" src="./batmanimage.png">
+                            <button class="toggle-desc">Ver descrição</button>
                         <p class="project-text">
                             Página trailer do Batman desenvolvida com HTML, 
                             CSS e JavaScript. Projeto criado durante o curso, 
@@ -102,6 +104,7 @@
                 <div class="position-container right">
                     <div class="project-card">
                         <img class="project-image" src="./investigadorimage.png">
+                            <button class="toggle-desc">Ver descrição</button>
                         <p class="project-text">
                             Landing page do CodeInvestigador desenvolvida com HTML,
                              CSS e JavaScript. Projeto criado sob demanda para um 
@@ -112,7 +115,8 @@
                 </div>
                 <div class="position-container left">
                     <div class="project-card">
-                        <img class="project-image" src="./athenaimage.png">
+                        <img class="project-image" src="./athenaimage.png">    
+                        <button class="toggle-desc">Ver descrição</button>
                         <p class="project-text">
                            Landing page da Athena Revisão Textual desenvolvida e 
                             personalizada através do construtor da HostGator. Projeto 
@@ -124,6 +128,7 @@
                  <div class="position-container right">
                     <div class="project-card">
                         <img class="project-image" src="./blogimage.png">
+                            <button class="toggle-desc">Ver descrição</button>
                         <p class="project-text">
                            Blog "I.A. na Palma da Mão" desenvolvido em WordPress, 
                             com foco em conteúdo dinâmico sobre inteligência artificial,
@@ -168,14 +173,34 @@
   <p>2022 - Todos os direitos autorais reservados</p>
 </footer>
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.querySelector(".menu-toggle");
-    const navList = document.querySelector("nav ul");
+  // Esconder por padrão no mobile
+  function hideDescriptionsIfMobile() {
+    if (window.innerWidth <= 768) {
+      document.querySelectorAll('.project-text').forEach(p => p.classList.add('hidden'));
+    } else {
+      document.querySelectorAll('.project-text').forEach(p => p.classList.remove('hidden'));
+    }
+  }
 
-    toggle.addEventListener("click", () => {
-      navList.classList.toggle("show");
+  document.addEventListener("DOMContentLoaded", function () {
+    // Ativa/desativa descrição de cada projeto
+    document.querySelectorAll('.toggle-desc').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const desc = this.parentElement.querySelector('.project-text');
+        desc.classList.toggle('hidden');
+        if(desc.classList.contains('hidden')) {
+          this.textContent = 'Ver descrição';
+        } else {
+          this.textContent = 'Esconder descrição';
+        }
+      });
     });
+
+    hideDescriptionsIfMobile();
+
+    window.addEventListener('resize', hideDescriptionsIfMobile);
   });
-</script>    
+</script>
+  
 </body>
 </html>
