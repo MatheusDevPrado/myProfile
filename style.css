@@ -308,8 +308,9 @@ button {
         margin: 0 auto;
     }
     .profile-card {
-        margin-left: 10px;
-        width: 80vw;
+        margin-left: 10px 10px 10px 10px;
+        width: 85vw;
+        
     }
     .profile-sinopse {
         width: 90vw;
@@ -344,6 +345,7 @@ button {
     .form-container {
         width: 80vw;
         padding: 0;
+        margin: 30px;
     }
     form {
         width: 90vw !important;
