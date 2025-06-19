@@ -294,102 +294,119 @@ button {
     color: #fff;
     background-color: rgb(0, 38, 255);
 }
+/* MENU HAMBURGUER (exibido só no mobile) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  z-index: 1200;
+}
+.menu-toggle span,
+.menu-toggle div {
+  width: 28px;
+  height: 4px;
+  background: #fff;
+  margin: 4px 0;
+  border-radius: 2px;
+  display: block;
+}
 @media (max-width: 768px) {
-    nav {
-        flex-direction: row-reverse;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.95);
-        position: fixed;
-        top: 0;
-        left: 0;
-        padding: 60px 0;
-        z-index: 1000;
-    }
-
-    nav ul.show {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-
-    .hero-container h1 {
-        font-size: 16px;
-        padding: 10px;
-    }
-
-    nav ul li {
-        font-size: 20px;
-        margin: 20px 0;
-    }
-
-    .arrows {
-        width: 40px;
-        height: auto;
-    }
-
-    .profile-container {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .profile-content {
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .profile-card {
-        width: 80%;
-        margin: 0 auto;
-        flex-direction: column;
-    }
-
-    .profile-sinopse {
-      display: none;
-    }
-
-    .project-content {
-        width: 70%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .project-card {
-        flex-direction: column;
-        width: 70%;
-        height: auto;
-        padding: 10px;
-    }
-
-    .project-image {
-        width: 70%;
-        top: 0;
-        right: 0;
-        margin-bottom: 15px;
-    }
-
-    .form-container {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    form {
-        width: 50%;
-        height: auto;
-    }
-    footer {
-        width: 50%:
+  .menu-toggle {
+    display: flex;
+  }
+  nav {
+    width: 100%;
+    position: relative;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.95);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1100;
+    padding-top: 60px;
+    transition: left 0.3s;
+  }
+  nav ul.show {
+    display: flex;
+  }
 }
 
+/* AJUSTE PARA PROJETOS E CARDS EM TELAS PEQUENAS */
+@media (max-width: 1020px) {
+  .profile-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .profile-content {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .profile-card {
+    margin-left: 0;
+    width: 90vw;
+  }
+  .profile-sinopse {
+    width: 90vw;
+    margin: 20px auto;
+  }
+  .project-content {
+    width: 98vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .project-card {
+    width: 90vw;
+    min-height: 140px;
+    padding: 10px 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .project-image {
+    width: 85vw;
+    right: 0;
+    top: 0;
+    margin: 0 auto 12px auto;
+    position: static;
+  }
+}
 
+/* AJUSTE PARA O FORMULÁRIO NÃO FICAR SOBREPOSTO */
+@media (max-width: 900px) {
+  .formulario-container {
+    height: auto;
+    min-height: 700px;
+    padding: 40px 0;
+    background-attachment: scroll !important;
+  }
+  .form-container {
+    width: 100vw;
+    padding: 0;
+  }
+  form {
+    width: 90vw !important;
+    min-width: unset;
+    max-width: 600px;
+    height: auto;
+  }
+}
+
+/* CORRIGE O FOOTER EM MOBILE */
+@media (max-width: 600px) {
+  footer {
+    width: 100% !important;
+    font-size: 0.9em;
+    padding: 20px 0 !important;
+  }
+}
