@@ -1,181 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matheus prado</title>
-    <link rel="stylesheet" href="./style.css">
-
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matheus Prado</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div id="elemento01" class="hero-container">
-            <header>
-                <nav>
-                    <ul>
-                        <a href="#elemento01"><li>Home</li></a>
-                        <a href="#elemento02"><li>Projetos</li></a>
-                        <a href="#elemento03"><li>Tecnologias</li></a>
-                        <a href="#elemento04"><li>Contato</li></a>
-                    </ul>
-                </nav>
-            </header>
-        <h1>Procurando um desenvolvedor FullStack?</h1>
-        <svg class="arrows">
-            <path class="a1" d="M0 0 L30 32 L60 0"></path>
-            <path class="a2" d="M0 20 L30 52 L60 20"></path>
-            <path class="a3" d="M0 40 L30 72 L60 40"></path>
-        </svg>
+  <!-- Hero -->
+  <section id="elemento01" class="hero">
+    <header class="hero__header">
+      <a href="#" class="hero__logo">MP</a>
+      <button class="menu-toggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="hero__nav">
+        <ul>
+          <li><a href="#elemento01">Home</a></li>
+          <li><a href="#elemento02">Projetos</a></li>
+          <li><a href="#elemento03">Tecnologias</a></li>
+          <li><a href="#elemento04">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="hero__content">
+      <h1>Procurando um desenvolvedor FullStack?</h1>
+      <div class="arrows">
+        <svg><path class="a1" d="M0 0 L30 32 L60 0"></path></svg>
+        <svg><path class="a2" d="M0 20 L30 52 L60 20"></path></svg>
+        <svg><path class="a3" d="M0 40 L30 72 L60 40"></path></svg>
+      </div>
     </div>
-    <div  id="elemento02" class="content-container">
-        <div class="profile-container">
-            <div class="profile-content">
-                <div class="profile-card">
-                    <img class="profile-image" src="./profile-pic.png">
-                    <span class="nome-text">Matheus Prado Silva</span>
-                    <span class="profile-text">
-                        Foco e determinação. Estudando e
-                         desenvolvendo programas!
-                    </span>
-                    <a href="www.linkedin.com/in/matheus-prado-7546301b1" target="_blank">
-                        <button class="profile-button">
-                            Conhecer linkedin!
-                        </button>
-                    </a>
-                    <div class="divider"></div>
-                    <div class="icons-container">
-                        <img class="icon-container" src="./image-js.jpg" >
-                        <img class="icon-container" src="./image-react.png" >
-                        <img class="icon-container" src="./image-html.png" >
-                        <img class="icon-container" src="./image-css.png" >
-                    </div>
-                </div>
-            </div>
-            <div>
-                <p class="profile-sinopse">
-                    Sou um desenvolvedor full-stack apaixonado por tecnologia, 
-                    proativo, dedicado e comprometido com a excelência. Estou 
-                    em busca de novos desafios que me permitam aplicar e ampliar 
-                    meus conhecimentos, sempre com foco na evolução contínua e 
-                    no uso de ferramentas modernas de desenvolvimento.
-                    Tenho experiência prática no desenvolvimento de projetos
-                     utilizando tecnologias amplamente utilizadas no mercado, 
-                     como HTML, CSS, JavaScript e React. Além disso, possuo 
-                     conhecimentos sólidos em linguagens como Java, C++, Python
-                      e PHP, bem como em bancos de dados relacionais e não 
-                      relacionais, incluindo MySQL, SQL Server, MongoDB e MariaDB.
-                    Sou movido pelo aprendizado constante e pela vontade de 
-                    fazer a diferença. Quero a oportunidade de contribuir com 
-                    seu negócio, somando minhas habilidades e visão de desenvolvimento 
-                    para alcançarmos juntos resultados inovadores, eficientes e de
-                     alto impacto..</p>
-            </div>
-        </div>
-    </div>
-    <div  id="elemento03" class="content-container">
-        <div class="project-container">
-            <div class="project-content">
-                <div class="position-container right">
-                    <div class="project-card">
-                        <img class="project-image" src="./image-danie's.png">
-                        <p class="project-text">
-                            Site desenvolvido como parte da conclusão de curso,
-                             com o objetivo de divulgar os serviços oferecidos 
-                             por uma barbearia e fortalecer sua presença digital.
-                            Trata-se de um site simples, didático e funcional, 
-                            criado com foco em usabilidade e visual limpo, 
-                            utilizando as tecnologias HTML, CSS e JavaScript.
-                        </p>
-                    </div>
-                </div>
-                <div class="position-container left">
-                    <div class="project-card">
-                        <img class="project-image" src="./batmanimage.png">
-                        <p class="project-text">
-                            Página trailer do Batman desenvolvida com HTML, 
-                            CSS e JavaScript. Projeto criado durante o curso, 
-                            com parte realizada em aula e parte desenvolvida 
-                            de forma autônoma.
-                        </p>
-                    </div>
-                </div>
-                <div class="position-container right">
-                    <div class="project-card">
-                        <img class="project-image" src="./investigadorimage.png">
-                        <p class="project-text">
-                            Landing page do CodeInvestigador desenvolvida com HTML,
-                             CSS e JavaScript. Projeto criado sob demanda para um 
-                             cliente, com foco em apresentação visual clara, 
-                             responsividade e boa performance.
-                        </p>
-                    </div>
-                </div>
-                <div class="position-container left">
-                    <div class="project-card">
-                        <img class="project-image" src="./athenaimage.png">
-                        <p class="project-text">
-                           Landing page da Athena Revisão Textual desenvolvida e 
-                            personalizada através do construtor da HostGator. Projeto 
-                            criado sob demanda com foco em identidade visual, navegabilidade 
-                            e facilidade de atualização.
-                        </p>
-                    </div>
-                </div>
-                 <div class="position-container right">
-                    <div class="project-card">
-                        <img class="project-image" src="./blogimage.png">
-                        <p class="project-text">
-                           Blog "I.A. na Palma da Mão" desenvolvido em WordPress, 
-                            com foco em conteúdo dinâmico sobre inteligência artificial,
-                            acessibilidade e otimização para leitura em dispositivos móveis. 
-                            O projeto foi personalizado sob demanda, garantindo identidade 
-                            visual própria, fácil gerenciamento de publicações e boa performance.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div  id="elemento04" class="formulario-container">
-        <div class="form-container">
-            <form
-                action="https://formspree.io/f/xyyqyjle"
-                method="POST"
-            >  
-                <span>Preenchar o Formulário</span>
-                <label>
-                    Seu nome:
-                    <input type="text" name="name">
-                </label>
-                <label>
-                    Seu email:
-                    <input type="email" name="email">
-                </label>
-                <label>
-                    Telefone:
-                    <input type="text" name="telefone">
-                </label>
-                <label>
-                    Sua mensagem:
-                    <textarea name="message"></textarea>
-                </label>
-            
-                    <button type="submit">Enviar</button>
-            </form>
-</div>
-</div>
-<footer style="text-align: center; padding: 10px 0;">
-  <p>2022 - Todos os direitos autorais reservados</p>
-</footer>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.querySelector(".menu-toggle");
-    const navList = document.querySelector("nav ul");
+  </section>
 
-    toggle.addEventListener("click", () => {
-      navList.classList.toggle("show");
-    });
-  });
-</script>    
+  <!-- Sobre / Perfil -->
+  <section id="elemento02" class="profile">
+    <div class="profile__card">
+      <img src="profile-pic.png" alt="Foto de Matheus Prado" class="profile__image" />
+      <h2>Matheus Prado Silva</h2>
+      <p>Foco e determinação. Estudando e desenvolvendo programas!</p>
+      <a href="https://www.linkedin.com/in/matheus-prado-7546301b1" target="_blank" class="btn">
+        Conhecer LinkedIn
+      </a>
+      <div class="profile__icons">
+        <img src="image-js.jpg" alt="JavaScript" />
+        <img src="image-react.png" alt="React" />
+        <img src="image-html.png" alt="HTML" />
+        <img src="image-css.png" alt="CSS" />
+      </div>
+    </div>
+    <div class="profile__bio">
+      <p>
+        Sou um desenvolvedor full-stack apaixonado por tecnologia, proativo,
+        dedicado e comprometido com a excelência. Estou em busca de novos
+        desafios que me permitam aplicar e ampliar meus conhecimentos...
+      </p>
+    </div>
+  </section>
+
+  <!-- Projetos -->
+  <section id="elemento03" class="projects">
+    <div class="projects__list">
+      <article class="project">
+        <img src="image-danies.png" alt="Projeto Barbearia" />
+        <p>
+          Site desenvolvido como parte da conclusão de curso, com o objetivo de
+          divulgar os serviços oferecidos por uma barbearia...
+        </p>
+      </article>
+      <article class="project">
+        <img src="batmanimage.png" alt="Projeto Batman" />
+        <p>
+          Página trailer do Batman desenvolvida com HTML, CSS e JavaScript...
+        </p>
+      </article>
+      <article class="project">
+        <img src="investigadorimage.png" alt="CodeInvestigador" />
+        <p>
+          Landing page do CodeInvestigador desenvolvida com HTML, CSS e
+          JavaScript...
+        </p>
+      </article>
+      <article class="project">
+        <img src="athenaimage.png" alt="Athena Revisão Textual" />
+        <p>
+          Landing page da Athena Revisão Textual desenvolvida e personalizada...
+        </p>
+      </article>
+      <article class="project">
+        <img src="blogimage.png" alt="Blog IA na Palma da Mão" />
+        <p>
+          Blog "I.A. na Palma da Mão" desenvolvido em WordPress, com foco em
+          conteúdo dinâmico...
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="elemento04" class="contact">
+    <form action="https://formspree.io/f/xyyqyjle" method="POST" class="contact__form">
+      <h2>Preencha o Formulário</h2>
+      <label>
+        Seu nome
+        <input type="text" name="name" required />
+      </label>
+      <label>
+        Seu e-mail
+        <input type="email" name="email" required />
+      </label>
+      <label>
+        Telefone
+        <input type="tel" name="telefone" />
+      </label>
+      <label>
+        Mensagem
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>2022 – Todos os direitos autorais reservados</p>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".hero__nav ul");
+    toggle.addEventListener("click", () => nav.classList.toggle("show"));
+  </script>
 </body>
 </html>
