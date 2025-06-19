@@ -410,3 +410,24 @@ button {
     padding: 20px 0 !important;
   }
 }
+/* Botão da descrição nos projetos */
+.toggle-desc {
+  background: #0026ff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 7px 16px;
+  margin: 10px 0 8px 0;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.toggle-desc:hover {
+  background: #0019a8;
+}
+
+/* Esconde o texto se a classe .hidden estiver no parágrafo */
+.project-text.hidden {
+  display: none;
+}
+
