@@ -279,3 +279,100 @@ button {
     color: #fff;
     background-color: rgb(0, 38, 255);
 }
+@media (max-width: 768px) {
+    nav {
+        flex-direction: row-reverse;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.95);
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 60px 0;
+        z-index: 1000;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .hero-container h1 {
+        font-size: 26px;
+        padding: 20px;
+    }
+
+    nav ul li {
+        font-size: 20px;
+        margin: 20px 0;
+    }
+
+    .arrows {
+        width: 40px;
+        height: 120px;
+    }
+
+    .profile-container {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .profile-content {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .profile-card {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .profile-sinopse {
+        width: 100%;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .project-content {
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .project-card {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .project-image {
+        width: 100%;
+        top: 0;
+        right: 0;
+        margin-bottom: 15px;
+    }
+
+    .form-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    form {
+        width: 90%;
+        height: auto;
+    }
+}
