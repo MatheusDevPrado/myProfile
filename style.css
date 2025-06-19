@@ -61,6 +61,8 @@ nav li:hover {
     flex-direction: column;
     cursor: pointer;
     z-index: 1100;
+    position: relative;
+    padding: 10px;
 }
 
 .menu-toggle div {
@@ -83,6 +85,7 @@ nav li:hover {
         top: 0;
         left: 0;
         padding: 60px 0;
+        z-index: 1000;
     }
 
     nav ul.show {
@@ -103,4 +106,3 @@ nav li:hover {
     font-family: 'Roboto Serif', serif;
     font-size: 16px;
 }
-
