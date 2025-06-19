@@ -304,11 +304,11 @@ button {
         height: auto;
     }
     .profile-content {
-        width: 95%;
+        width: 80%;
         margin: 0 auto;
     }
     .profile-card {
-        margin-left: 10px 10px 10px 10px;
+        margin-left: 10px;
         width: 85vw;
         
     }
