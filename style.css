@@ -308,8 +308,8 @@ button {
         margin: 0 auto;
     }
     .profile-card {
-        margin-left: 0;
-        width: 100vw;
+        margin-left: 10px;
+        width: 80vw;
     }
     .profile-sinopse {
         width: 90vw;
@@ -387,7 +387,7 @@ button {
         font-size: 20px;
         margin: 20px 0;
     }
-    .arrows { width: 40px; height: auto; }
+    .arrows { width: 70px; height: auto; }
 }
 
 @media (max-width: 600px) {
