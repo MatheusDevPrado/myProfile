@@ -301,18 +301,20 @@ button {
         flex-direction: column;
         min-height: auto;
         gap: 0;
+        height: auto;
     }
     .profile-content {
-        width: 95%;
+        width: 90%;
         margin: 0 auto;
     }
     .profile-card {
         margin-left: 0;
-        width: 90vw;
+        width: 80vw;
     }
     .profile-sinopse {
         width: 90vw;
         margin: 20px auto;
+        height: auto;
     }
     .project-content {
         width: 98vw;
@@ -340,7 +342,7 @@ button {
         background-attachment: scroll !important;
     }
     .form-container {
-        width: 100vw;
+        width: 80vw;
         padding: 0;
     }
     form {
@@ -353,6 +355,9 @@ button {
 }
 
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
     nav { width: 100%; }
     ul {
         display: none;
@@ -368,6 +373,9 @@ button {
         z-index: 1100;
         padding-top: 60px;
         transition: left 0.3s;
+    }
+    h1 {
+        text-align: center;
     }
     ul.show { display: flex; }
     .menu-toggle { display: flex; }
