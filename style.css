@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@100&display=swap');
 
+/* RESET */
 * {
     margin: 0;
+    box-sizing: border-box;
 }
-.hero-container{
-    height: 100vh;
+
+/* HERO */
+.hero-container {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,19 +21,22 @@
     padding: 10px;
 }
 
+/* HEADER/NAV */
 h1 {
-   font-family: 'Osvaldo', sans-serif;
-   color: #fff;
-   font-size: 40px;
+    font-family: 'Osvaldo', sans-serif;
+    color: #fff;
+    font-size: 40px;
 }
 nav {
     width: 50%;
+    position: relative;
 }
 ul {
     display: flex;
     justify-content: space-between;
     list-style: none;
     width: 700px;
+    padding: 0;
 }
 li {
     display: inline-block;
@@ -39,24 +46,30 @@ li {
     cursor: pointer;
 }
 li:hover {
-    color: rgb(0, 38, 255);    
+    color: rgb(0, 38, 255);
 }
+
+/* MENU HAMBURGUER */
 .menu-toggle {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    z-index: 1100;
-    position: relative;
-    padding: 10px;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    z-index: 1200;
 }
-
+.menu-toggle span,
 .menu-toggle div {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
+    width: 28px;
+    height: 4px;
+    background: #fff;
     margin: 4px 0;
+    border-radius: 2px;
+    display: block;
 }
 
+/* ARROWS */
 .arrows {
     width: 60px;
     height: 172px;
@@ -67,51 +80,34 @@ li:hover {
     fill: transparent;
     stroke-width: 1px;
     animation: arrow 2s infinite;
-    -webkit-animation: arrow 2s infinite;
 }
-@keyframes arrow
- {
-    0% {opacity: 0}
-    40% {opacity: 1}
-    80% {opacity: 0}
-    100% {opacity: 0}
+@keyframes arrow {
+    0% {opacity: 0;}
+    40% {opacity: 1;}
+    80% {opacity: 0;}
+    100% {opacity: 0;}
 }
-@-webkit-keyframes arrow 
-{
-    0% {opacity: 0}
-    40% {opacity: 1}
-    80% {opacity: 0}
-    100% {opacity: 0}
-}
-.arrows path.a1 {
-    animation-delay: 1s;
-    -webkit-animation-delay: 1s;
-}
-.arrows path.a2 {
-    animation-delay: -0.5s;
-    -webkit-animation-delay: -0.5s;
-}
-.arrows path.a3 {
-    animation-delay: 0s;
-    -webkit-animation-delay: 0s;
-}
+.arrows path.a1 { animation-delay: 1s; }
+.arrows path.a2 { animation-delay: -0.5s; }
+.arrows path.a3 { animation-delay: 0s; }
+
+/* PROFILE */
 .content-container {
-    height: 100vh;
+    min-height: 100vh;
     background-color: #333;
 }
 .profile-container {
     color: #333;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
     justify-content: space-between;
     background-image: url('./profile-fundo.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+    gap: 20px;
 }
 .profile-content {
     width: 30%;
@@ -123,13 +119,11 @@ li:hover {
     width: 350px;
     margin-left: 60px;
     background-color: #fff;
-    padding-top: 30px;
-    padding-bottom: 10px;
+    padding: 30px 0 10px 0;
     border-radius: 8px;
 }
 .profile-image {
     width: 150px;
-    height: auto;
     border-radius: 50%;
     border: 4px solid rgb(0, 38, 255);
 }
@@ -168,10 +162,9 @@ li:hover {
 }
 .icon-container {
     width: 50px;
-    height: auto;
 }
 .profile-sinopse {
-    text-align: left;    
+    text-align: left;
     width: 400px;
     margin-right: 50px;
     font-family: 'Osvaldo', sans-serif;
@@ -179,9 +172,10 @@ li:hover {
     font-size: 17px;
 }
 
+/* PROJECTS */
 .project-container {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -193,59 +187,52 @@ li:hover {
 }
 .project-content {
     width: 75%;
-    height: 80%;
     display: grid;
     grid-template-rows: repeat(1fr, 2);
+    gap: 20px;
 }
 .position-container {
     width: 100%;
     display: flex;
 }
-.right {
-    justify-content: flex-end;
-}
-.left {
-    justify-content: flex-start;
-}
+.right { justify-content: flex-end; }
+.left { justify-content: flex-start; }
 .project-card {
     width: 500px;
-    height: 120px;
     background-color: black;
     box-shadow: 10px 10px 5px black;
     border-radius: 8px;
     display: flex;
     align-items: center;
-} 
-.card-reverse {
-    flex-direction: row-reverse;
+    min-height: 120px;
+    padding: 10px;
 }
+.card-reverse { flex-direction: row-reverse; }
 .project-image {
     width: 200px;
-    height: auto;
-    position: relative;
     border-radius: 8px;
-    right: 20px;
-    top: 20px;
+    margin-right: 20px;
 }
-.image-reverse {
-    left: 20px;
-}
+.image-reverse { margin-left: 20px; margin-right: 0; }
 .project-text {
     font-size: 15px;
     color: #fff;
     font-family: 'Osvaldo', sans-serif;
 }
+
+/* FORM */
 .formulario-container {
-    height: 600px;
+    min-height: 600px;
     background-image: url('./image-contato.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 40px 0;
 }
 .form-container {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -254,38 +241,33 @@ li:hover {
 }
 span {
     font-size: 25px;
-    align-items: center;  
-    position: relative;
     text-align: center;
     margin-bottom: 15px;
     padding-bottom: 30px;
-}  
+}
 form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color : #fff;
+    background-color: #fff;
     width: 300px;
-    height: 500px;
+    min-width: 200px;
+    max-width: 90vw;
+    min-height: 400px;
     padding: 20px;
     border-radius: 8px;
 }
-label {
-    display: block;
-}
-input {
+label { display: block; }
+input, textarea {
     display: block;
     width: 100%;
     padding: 5px;
+    font-family: inherit;
+    font-size: 16px;
 }
 textarea {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    min-width: 100%;
     height: 200px;
-    max-height: 200px;
-    min-height: 200px;
+    resize: vertical;
 }
 button {
     height: 40px;
@@ -293,161 +275,117 @@ button {
     border-radius: 10px;
     color: #fff;
     background-color: rgb(0, 38, 255);
-}
-/* MENU HAMBURGUER (exibido só no mobile) */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  position: absolute;
-  right: 10px;
-  top: 20px;
-  z-index: 1200;
-}
-.menu-toggle span,
-.menu-toggle div {
-  width: 28px;
-  height: 4px;
-  background: #fff;
-  margin: 4px 0;
-  border-radius: 2px;
-  display: block;
-}
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
-  nav {
-    width: 100%;
-    position: relative;
-  }
-  nav ul {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0,0,0,0.95);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1100;
-    padding-top: 60px;
-    transition: left 0.3s;
-  }
-  nav ul.show {
-    display: flex;
-  }
-}
-@media (max-width: 900px) {
-  .project-card {
-    height: auto !important;
-    flex-direction: column !important;
-    align-items: flex-start;
-    padding: 10px 0;
-  }
-  .project-image {
-    width: 100%;
-    max-width: 95vw;
-    margin-bottom: 10px;
-    top: 0;
-    right: 0;
-    position: static;
-  }
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-
-/* AJUSTE PARA PROJETOS E CARDS EM TELAS PEQUENAS */
-@media (max-width: 1020px) {
-  .profile-container {
-    flex-direction: column;
-    height: auto;
-  }
-  .profile-content {
-    width: 95%;
-    margin: 0 auto;
-  }
-  .profile-card {
-    margin-left: 0;
-    width: 90vw;
-  }
-  .profile-sinopse {
-    width: 90vw;
-    margin: 20px auto;
-  }
-  .project-content {
-    width: 98vw;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-  }
- .project-card {
-  width: 500px;
-  background-color: black;
-  box-shadow: 10px 10px 5px black;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  min-height: 120px;
-  }
-
-  .project-image {
-    width: 85vw;
-    right: 0;
-    top: 0;
-    margin: 0 auto 12px auto;
-    position: static;
-  }
-}
-
-/* AJUSTE PARA O FORMULÁRIO NÃO FICAR SOBREPOSTO */
-@media (max-width: 900px) {
-  .formulario-container {
-    height: auto;
-    min-height: 700px;
-    padding: 40px 0;
-    background-attachment: scroll !important;
-  }
-  .form-container {
-    width: 100vw;
-    padding: 0;
-  }
-  form {
-    width: 90vw !important;
-    min-width: unset;
-    max-width: 600px;
-    height: auto;
-  }
-}
-
-/* CORRIGE O FOOTER EM MOBILE */
-@media (max-width: 600px) {
-  footer {
-    width: 100% !important;
-    font-size: 0.9em;
-    padding: 20px 0 !important;
-  }
-}
-/* Botão da descrição nos projetos */
+/* PROJETOS: Toggle de descrição */
 .toggle-desc {
-  background: #0026ff;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  padding: 7px 16px;
-  margin: 10px 0 8px 0;
-  font-size: 14px;
-  cursor: pointer;
-  transition: background 0.2s;
+    background: #0026ff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 7px 16px;
+    margin: 10px 0 8px 0;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
 }
-.toggle-desc:hover {
-  background: #0019a8;
+.toggle-desc:hover { background: #0019a8; }
+.project-text.hidden { display: none; }
+
+/* RESPONSIVIDADE */
+@media (max-width: 1020px) {
+    .profile-container {
+        flex-direction: column;
+        min-height: auto;
+        gap: 0;
+    }
+    .profile-content {
+        width: 95%;
+        margin: 0 auto;
+    }
+    .profile-card {
+        margin-left: 0;
+        width: 90vw;
+    }
+    .profile-sinopse {
+        width: 90vw;
+        margin: 20px auto;
+    }
+    .project-content {
+        width: 98vw;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+    .project-card {
+        width: 90vw;
+        flex-direction: column;
+        align-items: flex-start;
+        min-height: unset;
+        padding: 10px 0;
+    }
+    .project-image {
+        width: 85vw;
+        margin: 0 auto 12px auto;
+    }
 }
 
-/* Esconde o texto se a classe .hidden estiver no parágrafo */
-.project-text.hidden {
-  display: none;
+@media (max-width: 900px) {
+    .formulario-container {
+        min-height: 700px;
+        padding: 40px 0;
+        background-attachment: scroll !important;
+    }
+    .form-container {
+        width: 100vw;
+        padding: 0;
+    }
+    form {
+        width: 90vw !important;
+        max-width: 600px;
+        min-width: unset;
+        min-height: unset;
+        height: auto;
+    }
 }
 
+@media (max-width: 768px) {
+    nav { width: 100%; }
+    ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,0.95);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1100;
+        padding-top: 60px;
+        transition: left 0.3s;
+    }
+    ul.show { display: flex; }
+    .menu-toggle { display: flex; }
+    .hero-container h1 {
+        font-size: 16px;
+        padding: 10px;
+    }
+    ul li {
+        font-size: 20px;
+        margin: 20px 0;
+    }
+    .arrows { width: 40px; height: auto; }
+}
+
+@media (max-width: 600px) {
+    footer {
+        width: 100% !important;
+        font-size: 0.9em;
+        padding: 20px 0 !important;
+    }
+}
