@@ -42,6 +42,22 @@ li {
 li:hover {
     color: rgb(0, 38, 255);    
 }
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1100;
+    position: relative;
+    padding: 10px;
+}
+
+.menu-toggle div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
 .arrows {
     width: 60px;
     height: 172px;
