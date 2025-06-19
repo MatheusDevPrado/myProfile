@@ -152,5 +152,18 @@
             </form>
 </div>
 </div>
+<footer style="text-align: center; padding: 10px 0;">
+  <p>2022 - Todos os direitos autorais reservados</p>
+</footer>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".menu-toggle");
+    const navList = document.querySelector("nav ul");
+
+    toggle.addEventListener("click", () => {
+      navList.classList.toggle("show");
+    });
+  });
+</script>    
 </body>
 </html>
