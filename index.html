@@ -181,7 +181,7 @@
   <p>2022 - Todos os direitos autorais reservados</p>
 </footer>
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
+   document.addEventListener("DOMContentLoaded", function () {
       const toggle = document.querySelector(".menu-toggle");
       const navList = document.querySelector("nav ul");
       if(toggle){
@@ -189,7 +189,14 @@
           navList.classList.toggle("show");
         });
       }
+      // FECHA O MENU AO CLICAR EM QUALQUER LINK
+      document.querySelectorAll("nav ul li a").forEach(function(link){
+        link.addEventListener("click", function() {
+          navList.classList.remove("show");
+        });
+      });
     });
+
   // Esconder por padrão no mobile
   function hideDescriptionsIfMobile() {
     if (window.innerWidth <= 768) {
