@@ -315,6 +315,7 @@ button {
 
 /* PROJETOS: Toggle de descrição */
 .toggle-desc {
+    display: none;
     background: #0026ff;
     color: #fff;
     border: none;
