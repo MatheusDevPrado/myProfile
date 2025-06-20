@@ -333,7 +333,7 @@ button {
     .project-content { width: 98vw; }
     .project-card { width: 95vw; }
 }
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .profile-container {
         flex-direction: column;
         align-items: center;
