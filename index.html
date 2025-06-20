@@ -12,19 +12,21 @@
     <div id="elemento01" class="hero-container">
             <header>
                 <nav>
+                    <!-- Botão hamburguer -->
                     <div class="menu-toggle">
-                      <div> <a href="#elemento01"><li>Home</li></a></div>
-                      <div> <a href="#elemento02"><li>Tecnologias</li></a></div>
-                      <div> <a href="#elemento03"><li>Projetos</li></a></div>
-                      <div><a href="#elemento04"><li>Contato</li></a></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </div>
+                    <!-- Menu de links -->
                     <ul>
-                        <a href="#elemento01"><li>Home</li></a>
-                        <a href="#elemento02"><li>Tecnologias</li></a>
-                        <a href="#elemento03"><li>Projetos</li></a>
-                        <a href="#elemento04"><li>Contato</li></a>
+                        <li><a href="#elemento01">Home</a></li>
+                        <li><a href="#elemento02">Tecnologias</a></li>
+                        <li><a href="#elemento03">Projetos</a></li>
+                        <li><a href="#elemento04">Contato</a></li>
                     </ul>
                 </nav>
+
             </header>
         <h1>Procurando um desenvolvedor FullStack?</h1>
         <svg class="arrows">
@@ -179,6 +181,15 @@
   <p>2022 - Todos os direitos autorais reservados</p>
 </footer>
 <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.querySelector(".menu-toggle");
+      const navList = document.querySelector("nav ul");
+      if(toggle){
+        toggle.addEventListener("click", () => {
+          navList.classList.toggle("show");
+        });
+      }
+    });
   // Esconder por padrão no mobile
   function hideDescriptionsIfMobile() {
     if (window.innerWidth <= 768) {
