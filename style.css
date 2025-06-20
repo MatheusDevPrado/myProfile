@@ -298,20 +298,24 @@ button {
 /* RESPONSIVIDADE */
 @media (max-width: 900px) {
     nav ul li a {
-       color: #fff;
-       font-family: 'Osvaldo', sans-serif;
-       font-size: 21px;
-       text-decoration: none;
-       transition: color 0.2s;
-       display: block;
-       text-align: center;
-       padding: 14px 0;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        width: 700px;
+        padding: 0;
     }
-        
-    nav ul li a:hover {
+    li {
+        display: inline-block;
+        font-family: 'Osvaldo', sans-serif;
+        font-size: 21px;
+        color: #fff;
+        cursor: pointer;
+    }
+    li:hover {
         color: rgb(0, 38, 255);
-        text-decoration: none;    
     }
+    
 
     .profile-container {
         flex-direction: column;
